@@ -78,7 +78,7 @@ lib/
 
 ## 📸 **Capturas de Tela**  
 
-*(Adicione imagens do app em funcionamento)*  
+![Image](https://github.com/user-attachments/assets/ef8edb98-357b-4bcc-9cdb-77b79b9817e8)  
 
 ---
 
