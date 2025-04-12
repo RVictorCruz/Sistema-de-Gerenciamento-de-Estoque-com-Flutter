@@ -79,6 +79,7 @@ lib/
 ## 📸 **Capturas de Tela**  
 
 ![Image](https://github.com/user-attachments/assets/ef8edb98-357b-4bcc-9cdb-77b79b9817e8)  
+![Image](https://github.com/user-attachments/assets/2936d42e-b2c1-4595-9eb0-52df68324e59)
 
 ---
 
