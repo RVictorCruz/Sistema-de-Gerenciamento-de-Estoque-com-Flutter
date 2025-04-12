@@ -78,8 +78,13 @@ lib/
 
 ## 📸 **Capturas de Tela**  
 
-![Image](https://github.com/user-attachments/assets/ef8edb98-357b-4bcc-9cdb-77b79b9817e8)  
-![Image](https://github.com/user-attachments/assets/2936d42e-b2c1-4595-9eb0-52df68324e59)
+<p>
+  <img src="https://github.com/user-attachments/assets/ef8edb98-357b-4bcc-9cdb-77b79b9817e8" width="200" />
+  <img src="https://github.com/user-attachments/assets/2936d42e-b2c1-4595-9eb0-52df68324e59" width="200" />
+  <img src="https://github.com/user-attachments/assets/2a9bbb9c-7299-493b-8297-002c38f19540" width="200" />
+  <img src="https://github.com/user-attachments/assets/dcdc71ef-6c7d-4394-81a8-b6a908fe4b23" width="200" />
+</p>
+
 
 ---
 
