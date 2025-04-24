@@ -166,6 +166,8 @@ class DatabaseHelper {
     return result.map((json) => SaleItem.fromMap(json)).toList();
   }
 
+  
+
   // ========== Métodos Transacionais ==========
   Future<void> executeSaleWithItems(Sale sale, List<SaleItem> items) async {
     final db = await instance.database;

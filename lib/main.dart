@@ -1,6 +1,7 @@
+import 'package:controle_total/screens/report_screen.dart';
 import 'package:controle_total/screens/sale_report.dart';
 import 'package:flutter/material.dart';
-import 'package:controle_total/screens/home_screen.dart'; // Certifique-se de importar a tela correta
+import 'package:controle_total/screens/home_screen.dart';
 
 void main() {
   runApp(const StockScanApp());
@@ -12,13 +13,14 @@ class StockScanApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'StockScan Pro',
+      title: 'Controle Total',
       debugShowCheckedModeBanner: false,
       theme: _buildAppTheme(),
       initialRoute: '/', // Defina a rota inicial
       routes: {
         '/': (context) => const HomeScreen(), // Rota inicial
-        '/home': (context) => const HomeScreen(), // Alias para a home
+        '/home': (context) => const HomeScreen(),
+        '/report': (context) => const ReportScreen(), // Alias para a home
         // Outras rotas que você precisar
         '/saleReport': (context) {
           final args = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;

@@ -22,6 +22,9 @@ class _ScannerScreenState extends State<ScannerScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Escanear Produto'),
+        shadowColor: Colors.black,
+        foregroundColor: Colors.blue,
+        backgroundColor: const Color.fromARGB(255, 42, 43, 43),
         actions: [
           IconButton(
             icon: ValueListenableBuilder(

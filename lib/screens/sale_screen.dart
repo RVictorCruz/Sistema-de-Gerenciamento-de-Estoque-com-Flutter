@@ -261,7 +261,7 @@ class _SaleScreenState extends State<SaleScreen> {
       if (!mounted) return; // Verificação se o State está montado
 
       // 2. Navega para a tela do PDF
-      await Navigator.push(
+      if(context.mounted){await Navigator.push(
         context,
         MaterialPageRoute(
           builder: (context) => SaleReportScreen(
@@ -269,10 +269,10 @@ class _SaleScreenState extends State<SaleScreen> {
             items: _saleItems,
           ),
         ),
-      );
+      );}
 
       // 3. Volta para a tela inicial
-      if (mounted) {
+      if (context.mounted) {
         Navigator.pushNamedAndRemoveUntil(
           context,
           '/home',
@@ -281,7 +281,7 @@ class _SaleScreenState extends State<SaleScreen> {
       }
 
     } catch (e) {
-      if (mounted) {
+      if (context.mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('Erro ao finalizar venda: $e')),
         );

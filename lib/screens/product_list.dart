@@ -33,6 +33,8 @@ class _ProductListScreenState extends State<ProductListScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Lista de Produtos'),
+        backgroundColor: const Color.fromARGB(162, 0, 0, 0),
+        foregroundColor: const Color.fromARGB(255, 61, 131, 252),
         actions: [
           IconButton(
             icon: const Icon(Icons.add),
@@ -83,6 +85,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.blue,
         onPressed: () => _navigateToProductForm(),
         tooltip: 'Adicionar produto',
         child: const Icon(Icons.add),
@@ -127,9 +130,11 @@ class _ProductListScreenState extends State<ProductListScreen> {
 
     if (result == true) {
       _refreshProducts();
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Venda de ${product.description} registrada!')),
-      );
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Venda de ${product.description} registrada!')),
+        );
+      }
     }
   }
 
@@ -202,15 +207,19 @@ class _ProductListScreenState extends State<ProductListScreen> {
         await DatabaseHelper.instance.deleteProduct(product.id!);
         if (!mounted) return;
         
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('${product.description} excluído com sucesso')),
-        );
+        if (context.mounted) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text('${product.description} excluído com sucesso')),
+            );
+          }
         _refreshProducts();
       } catch (e) {
         if (!mounted) return;
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Erro ao excluir: $e')),
-        );
+        if (context.mounted) {
+  ScaffoldMessenger.of(context).showSnackBar(
+    SnackBar(content: Text('Erro ao excluir: $e')),
+  );
+}
       }
     }
   }
